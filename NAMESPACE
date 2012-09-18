@@ -1,0 +1,3 @@
+export(openComPort, closeComPort, writeByte, writeBytes, writeString, readBytes, isCTSEnabled)
+exportClasses(rs232)
+useDynLib(rs232, rs232_openComPort, rs232_closeComPort, rs232_writeByte, rs232_writeBytes, rs232_writeString, rs232_readBytes, rs232_isCTSEnabled)

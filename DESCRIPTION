@@ -1,0 +1,9 @@
+Package: rs232
+Type: Package
+Title: A Simple interface to rs232 ports.
+Version: 0.1
+Date: 2012-09-18
+Author: Simon Knapp
+Maintainer: Simon Knapp <simon.knapp@sleepingwell.com>
+Description: A very simple wrapper around a library for reading from/writing to rs232 ports. The original work can be found at http://www.teuniz.net/RS-232.
+License: What GPL 2.0
