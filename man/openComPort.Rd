@@ -1,25 +1,25 @@
 \name{openComPort}
 \alias{openComPort}
+\alias{closeComPort}
+\alias{close.rs232}
 
-\title{Open a com (rs232) port.}
+\title{Open or close a com (rs232) port.}
 
 \usage{
 openComPort(portNumber, baudRate)
+closeComPort(port)
+close(port)
 }
 
 \arguments{
-  \item{portNumber}{The number of the port (will be coerced to integer by as.integer).}
-  \item{baudRate}{The baud rate for the port (will be coerced to integer by as.integer).}
-}
-
-\details{
-Opens the comport, comportnumber starts with 0 (see the list of numbers).
-Baudrate is expressed in baud per second i.e 115200 (see the list of possible baudrates).
+  \item{portNumber}{The number of the port (will be coerced to \link{integer} by \code{\link{as.integer}}). See the list of available port numbers below.}
+  \item{baudRate}{The baud rate for the port (will be coerced to \link{integer} by \code{\link{as.integer}}). Expressed in baud per second. See the list of available baud rates below.}
+  \item{port}{An object of type \link{rs232-class} opened with a call to \code{openComPort}.}
 }
 
 \section{Warning}{
 As I have not tested this package, I'm not sure what the consequences of calling \code{openComPort}
-with the same port number are. Futher, I'm not sure what would happen if one did this and then closed
+multiple times with the same port number are. Futher, I'm not sure what would happen if one did this and then closed
 any one of the ports opened... I presume that this would close all of them.
 }
 
@@ -85,7 +85,12 @@ Linux \tab windows\cr
 \author{Simon Knapp}
 
 \examples{
-port <- openComPort(as.integer(0), as.integer(110))
+# Open a com port
+port <- openComPort(0, 110)
+
+# Read upto 4095 bytes from it.
 bytes <- readBytes(port)
-closeComPort(port)
+
+# Close the port
+closeComPort(port)# or close(port)
 }

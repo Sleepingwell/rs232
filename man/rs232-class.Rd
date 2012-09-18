@@ -30,7 +30,7 @@ No methods defined with class "rs232" in the signature.
 showClass("rs232")
 
 # Open, use and close the port.
-port <- openComPort(as.integer(0), as.integer(110))
+port <- openComPort(0, 110)
 bytes <- readBytes(port)
 closeComPort(port)
 }

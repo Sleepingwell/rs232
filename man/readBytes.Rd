@@ -24,7 +24,12 @@ A vector of bytes (type \link{raw}).
 \author{Simon Knapp}
 
 \examples{
-port <- openComPort(as.integer(0), as.integer(110))
+# Open a com port
+port <- openComPort(0, 110)
+
+# Read upto 4095 bytes from it.
 bytes <- readBytes(port)
+
+# Close the port.
 closeComPort(port)
 }

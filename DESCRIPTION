@@ -1,7 +1,7 @@
 Package: rs232
 Type: Package
 Title: A Simple interface to rs232 ports.
-Version: 0.1
+Version: 0.1.1
 Date: 2012-09-18
 Author: Simon Knapp
 Maintainer: Simon Knapp <simon.knapp@sleepingwell.com>

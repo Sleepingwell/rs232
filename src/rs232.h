@@ -41,7 +41,7 @@
 ***************************************************************************
 *
 * Minor revisions to error handling that are more suited (and specific
-* to R. See comments that start with //S and lines ending with //S.
+* to) R. See comments that start with //S, /*S and lines ending with //S.
 *
 * Licence and condtions as above.
 */
@@ -74,7 +74,7 @@ extern "C" {
 
 #endif
 
-void/*int*/ OpenComport(int, int);
+void/*S int*/ OpenComport(int, int);
 int PollComport(int, unsigned char *, int);
 int SendByte(int, unsigned char);
 int SendBuf(int, unsigned char *, int);

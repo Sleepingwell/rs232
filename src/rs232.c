@@ -41,7 +41,7 @@
 ***************************************************************************
 *
 * Minor revisions to error handling that are more suited (and specific
-* to R. See comments that start with //S and lines ending with //S.
+* to) R. See comments that start with //S, /*S and lines ending with //S.
 *
 * Licence and condtions as above.
 */
